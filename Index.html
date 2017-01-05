@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>DCProperties</title>
+    <link rel="icon" type="image/x-icon" href="http://onterrawms.blob.core.windows.net/dcproperties/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+   
+    <link rel="stylesheet" type="text/css" href="http://onterrawms.blob.core.windows.net/dcproperties/css/Site.css" />
+    <script type="text/javascript" src="http://onterrawms.blob.core.windows.net/dcproperties/scripts/App.js"></script>
+    <script type="text/javascript" src="http://onterrawms.blob.core.windows.net/dcproperties/scripts/Dashboard.js"></script>
+
+
+    <script type="text/javascript">
+       
+        function mapLoaded() {
+            app.initialize();
+        }
+    </script>
+
+
+</head>
+<body>
+    <div id="content">
+
+        <div id="loading" class="hide">
+            <span id="loading-indicator"><i class="fa fa-spinner fa-spin"></i></span>
+        </div>
+
+        <div id="left">
+
+            <div id="dcocto_content">
+                <iframe id="dcocto_frame"></iframe>
+            </div>
+
+            <div id="dashboard-adjust"></div>
+        </div>
+
+        <div id="right">
+
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+
+            <div id="layerlistButton" class="btn-group">
+                <button id="button_layerlist" class="btn btn-primary" title="List of available Layers">
+                    Toggle Layers
+                </button>
+                <button id="caret_layerlist" class="btn btn-primary dropdown-toggle"  data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+ 
+                <ul id="layerList" class="dropdown-menu" role="menu" style="position: absolute;top:33px;left:1px;">
+                    <li><a href="#" data-command="showProperties">Properties&nbsp;<i id="layer_properties" class="fa fa-check-square-o fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a href="#" data-command="showStreets">Streets&nbsp;<i id="layer_streets" class="fa fa-check-square-o fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a href="#" data-command="showAlleys">Alleys&nbsp;<i id="layer_alleys" class="fa fa-square-o fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a href="#" data-command="showZones">Zones&nbsp;<i id="layer_zones" class="fa fa-square-o fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a href="#" data-command="showInteriors">Interior Parcels&nbsp;<i id="layer_interiors" class="fa fa-square-o fa-lg" aria-hidden="true"></i></a></li>
+                </ul>
+
+            </div>
+
+            <div id="dashboard-close"><i class="fa fa-close"></i></div>
+            <div id="dashboard-open"><i class="fa fa-cog"></i></div>
+
+        </div>
+    </div>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?branch=release&callback=mapLoaded'></script>
+</body>
+</html>

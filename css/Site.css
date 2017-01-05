@@ -1,0 +1,1269 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* bootstrap does other inputs */
+input[type="file"] {
+    width: 100%;
+}
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+input.invalid {
+    border: 1px solid #ff0000;
+}
+
+textarea.form-control {
+    height: 5em;
+}
+
+/* useful elements */
+
+/* we don't want tab pages getting unexpected margins */
+h1, h2, h3, h4 {
+    margin-top: 0px;
+}
+
+span.table-button {
+}
+
+/* steve likes fixed columns for buttons */
+.button-column {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.button-column2 {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+/* Layouts */
+header {
+    height: 50px;
+}
+
+    header img {
+        margin-top: 8px;
+    }
+
+    header a {
+        position: absolute;
+        top: 15px;
+        right: 150px;
+    }
+
+#onterra-logo {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+}
+
+#dashboard-close {
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+footer {
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#dashboard-adjust {
+    width: 10px;
+    cursor: col-resize;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    background-color: #ddd;
+}
+
+#dashboard-open {
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    font-size: 30px;
+    cursor: pointer;
+         display: none;
+}
+
+#map-tools {
+    position: absolute;
+    left: 200px;
+}
+
+    #map-tools .btn {
+        padding: 4px;
+        color: rgb(82, 148, 206);
+    }
+
+#draw-commands {
+    position: absolute;
+    left: 200px;
+    top: 30px;
+}
+
+/* floats on the map, following the mouse */
+.map-floater {
+    position: absolute;
+    background-color: #FFF;
+    padding: 2px 5px;
+    display: none;
+    color: #000;
+}
+
+#map-context-menu {
+    position: absolute;
+    display: none;
+    background-color: #FFF;
+    font-size: 14px;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    position: relative;
+}
+
+    #content #left {
+        height: 100%;
+        float: left;
+        display: block;
+        width: 500px;
+        position: relative;
+    }
+
+    #content #right {
+        height: 100%;
+        margin-left: 500px;
+        position: relative;
+    }
+
+#dashboard {
+    padding: 0px 10px;
+    position: relative;
+    height: 100%;
+}
+
+    #dashboard .nav {
+        margin-right: 10px;
+    }
+
+    #dashboard .tab-content {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 20px 10px;
+        margin-right: 10px;
+    }
+
+#map-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* general usage */
+span.actions {
+    color: yellow;
+}
+
+/* Stops upload */
+#stops-upload-panel {
+    overflow-y: auto;
+    min-height: 50px;
+}
+
+/* options for displaying directions */
+
+#directions-options-modal .format-csv-stops {
+    display: none;
+}
+
+    #directions-options-modal.format-csv-stops .format-csv-stops {
+        display: block;
+    }
+
+#directions-options-modal .format-csv-locations {
+    display: none;
+}
+
+    #directions-options-modal.format-csv-locations .format-csv-locations {
+        display: block;
+    }
+
+#directions-options-modal .format-text {
+    display: none;
+}
+
+    #directions-options-modal.format-text .format-text {
+        display: block;
+    }
+
+#directions-options-modal .format-display {
+    display: none;
+}
+
+    #directions-options-modal.format-display .format-display {
+        display: block;
+    }
+
+#directions-options-modal .format-pdf {
+    display: none;
+}
+
+    #directions-options-modal.format-pdf .format-pdf {
+        display: block;
+    }
+
+#directions-options-modal .format-print {
+    display: none;
+}
+
+    #directions-options-modal.format-print .format-print {
+        display: block;
+    }
+
+#directions-options-modal .format-mobile {
+    display: none;
+}
+
+    #directions-options-modal.format-mobile .format-mobile {
+        display: block;
+    }
+
+#directions-options-modal textarea {
+    height: 5em;
+    font-size: 12px;
+}
+
+/* download modal */
+
+#download-file-modal .modal-content:not(.project) .project {
+    display: none;
+}
+
+#download-file-modal .modal-content:not(.gpx) .gpx {
+    display: none;
+}
+
+#download-file-modal .modal-content:not(.directions) .directions {
+    display: none;
+}
+
+#download-file-modal .modal-content:not(.csv) .csv {
+    display: none;
+}
+
+#download-file-modal .modal-content:not(.pdf) .pdf {
+    display: none;
+}
+
+/* upload wizard */
+#upload-wizard-modal .modal-content:not(.wizard-page-1) .wizard-page-1 {
+    display: none;
+}
+
+#upload-wizard-modal .modal-content:not(.wizard-page-2) .wizard-page-2 {
+    display: none;
+}
+
+#upload-wizard-modal .modal-content:not(.wizard-page-3) .wizard-page-3 {
+    display: none;
+}
+
+#upload-wizard-modal .modal-content:not(.wizard-page-4) .wizard-page-4 {
+    display: none;
+}
+
+#upload-wizard-modal .modal-content:not(.wizard-page-5) .wizard-page-5 {
+    display: none;
+}
+
+#upload-wizard-modal .modal-content.wizard-page-1 .not-wizard-page-1 {
+    display: none;
+}
+
+#upload-wizard-modal .modal-content.wizard-page-5 .not-wizard-page-5 {
+    display: none;
+}
+
+#upload-wizard-csv {
+    white-space: nowrap;
+}
+
+#upload-wizard-results {
+    white-space: nowrap;
+}
+
+    #upload-wizard-results .valid-address .glyphicon-warning-sign {
+        visibility: hidden;
+    }
+
+    #upload-wizard-results .valid-location .glyphicon-warning-sign {
+        visibility: hidden;
+    }
+
+    #upload-wizard-results .glyphicon-warning-sign {
+        color: red;
+    }
+
+
+
+    /* territory wizard */
+#territory-wizard-modal .modal-content:not(.wizard-page-1) .wizard-page-1 {
+    display: none;
+}
+
+#territory-wizard-modal .modal-content:not(.wizard-page-2) .wizard-page-2 {
+    display: none;
+}
+
+#territory-wizard-modal .modal-content:not(.wizard-page-3) .wizard-page-3 {
+    display: none;
+}
+
+#territory-wizard-modal .modal-content:not(.wizard-page-4) .wizard-page-4 {
+    display: none;
+}
+
+#territory-wizard-modal .modal-content:not(.wizard-page-5) .wizard-page-5 {
+    display: none;
+}
+
+#territory-wizard-modal .modal-content.wizard-page-1 .not-wizard-page-1 {
+    display: none;
+}
+
+#territory-wizard-modal .modal-content.wizard-page-4 .not-wizard-page-4 {
+    display: none;
+}
+
+#territory-wizard-csv {
+    white-space: nowrap;
+}
+
+#territory-wizard-results {
+    white-space: nowrap;
+}
+
+#territory-wizard-results .valid-address .glyphicon-warning-sign {
+    visibility: hidden;
+}
+
+#territory-wizard-results .valid-location .glyphicon-warning-sign {
+    visibility: hidden;
+}
+
+#territory-wizard-results .glyphicon-warning-sign {
+    color: red;
+}
+
+
+    /* census wizard */
+#census-wizard-modal .modal-content:not(.wizard-page-1) .wizard-page-1 {
+    display: none;
+}
+
+
+#census-wizard-modal .modal-content.wizard-page-1 .not-wizard-page-1 {
+    display: none;
+}
+
+
+/* stops display */
+#stops-panel {
+    overflow-y: auto;
+    height: 100%;
+    min-height: 50px;
+}
+
+/* vehicles display */
+#vehicles-panel {
+    overflow-y: auto;
+    height: 100%;
+    min-height: 50px;
+}
+
+/* MapControl */
+
+#map-control-items .panel-title .collapsed .glyphicon-plus {
+    display: inline-block;
+}
+
+#map-control-items .panel-title .glyphicon-plus {
+    display: none;
+}
+
+#map-control-items .panel-title .collapsed .glyphicon-minus {
+    display: none;
+}
+
+#map-control-items .panel-title .glyphicon-minus {
+    display: inline-block;
+}
+
+#map-control-items .icon {
+    display: inline-block;
+    width: 20px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: text-top;
+}
+
+    #map-control-items .icon:hover {
+        background-color: #ddd;
+    }
+
+/* the child span is highlighted as a block */
+#map-control-items .item.selected > span {
+    background-color: #ddd;
+}
+#map-control-items .item.highlighted > span {
+    background-color: yellow;
+}
+
+.indent {
+    display: inline-block;
+    width: 20px;
+}
+
+#locations-locations .name {
+    width: 200px;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+#locations-locations .locations {
+    display: none;
+}
+
+#locations-locations .opened .locations {
+    display: block;
+}
+
+#locations-locations .glyphicon-warning-sign {
+    color: red;
+}
+
+/* accepted errors are gray*/
+/* if okay, the warning sign doesn't appear*/
+
+#locations-locations .accepted-address .glyphicon-warning-sign {
+    color: #999;
+}
+
+#locations-locations .valid-address .glyphicon-warning-sign {
+    display: none;
+}
+
+
+#locations-locations .valid-location .glyphicon-warning-sign {
+    display: none;
+}
+
+#shapes-shapes .name {
+    width: 200px;
+    display: inline-block;
+    vertical-align: text-top;
+    padding-left: 5px;
+}
+
+/* RoutePlanner */
+#route-stops {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+    #route-stops .item {
+        margin: 2px;
+    }
+
+        #route-stops .item.selected {
+            background-color: #ddd;
+        }
+
+    #route-stops .icon {
+        display: inline-block;
+        width: 20px;
+        cursor: pointer;
+        text-align: center;
+        vertical-align: text-top;
+    }
+
+        #route-stops .icon:hover {
+            background-color: #ddd;
+        }
+
+    #route-stops .number {
+        border: 1px solid #000;
+        display: inline-block;
+        width: 2.5em;
+        margin-right: 3px;
+        text-align: right;
+        padding: 0px 5px;
+    }
+
+    #route-stops .start {
+        background-color: #00FF00;
+    }
+
+    #route-stops .middle {
+        background-color: #FFFF00;
+    }
+
+    #route-stops .end {
+        background-color: #FF0000;
+    }
+
+/* stops confirmation dialog */
+
+#route-stops-confirm-modal .modal-content.not-no-location .no-location {
+    display: none;
+}
+
+#route-stops-confirm-modal .modal-content.not-invalid-address .invalid-address {
+    display: none;
+}
+
+#route-stops-confirm-modal .modal-content.invalid-address .not-invalid-address {
+    display: none;
+}
+
+#route-stops-confirm-modal .modal-content.no-location .not-no-location {
+    display: none;
+}
+
+
+/* stop edit form */
+
+#stops-edit-modal .form-control.timeofday {
+    display: inline;
+    width: auto;
+}
+
+#stops-edit-modal .form-control.tiny {
+    width: 50px;
+}
+
+#stops-edit-modal .form-control.short {
+    width: 120px;
+}
+
+#stops-edit-modal .form-control.medium {
+    width: 180px;
+}
+
+/* vehicle edit form */
+#vehicle-edit-modal .form-control.short {
+    width: 120px;
+}
+
+#vehicle-edit-modal .form-control.medium {
+    width: 180px;
+}
+
+#vehicle-edit-modal .form-control.timeofday {
+    display: inline;
+    width: auto;
+}
+
+#vehicle-edit-modal select.color {
+    width: auto;
+}
+
+    #vehicle-edit-modal select.color option {
+        color: #FFFFFF;
+    }
+
+.confidence-low {
+    color: #ff0000;
+}
+/* routing options */
+
+#route-options-modal .form-control.timeofday {
+    display: inline;
+    width: auto;
+}
+
+/* routing display */
+#routing label {
+    display: inline;
+}
+
+/* shape editor */
+
+#shape-edit-modal .slider-horizontal {
+    width: 95%;
+    margin-left: 25px;
+}
+
+#shape-opacity-number {
+    width: 5em;
+    text-align: right;
+}
+
+/* font-awesome map icons */
+span.map-location {
+}
+
+    span.map-location .background {
+        display: none;
+    }
+
+    span.map-location.highlighted .background {
+        width: 21px;
+        height: 21px;
+        font-size: 21px;
+        display: inline-block;
+        color: yellow;
+        text-align: center;
+    }
+
+    span.map-location .icon {
+        width: 11px;
+        height: 11px;
+        font-size: 11px;
+        display: inline-block;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        text-align: center;
+    }
+
+span.map-stop {
+}
+
+    span.map-stop .anchor {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: yellow;
+    }
+
+        span.map-stop .anchor.start {
+            background-color: #00FF00;
+        }
+
+        span.map-stop .anchor.end {
+            background-color: #FF0000;
+        }
+
+    span.map-stop .stops {
+        display: inline-block;
+        height: 15px;
+        font-size: 10px;
+        background-color: yellow;
+        color: black;
+        border: 1px solid black;
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        border: 1px solid black;
+        overflow: hidden;
+        padding: 0 2px;
+    }
+
+        span.map-stop .stops.start {
+            background-color: #00FF00;
+        }
+
+        span.map-stop .stops.end {
+            background-color: #FF0000;
+        }
+
+/* stop and location context menu */
+
+/* the first div contains the title and a dropdown, so it must be pos:rel */
+#stoploc-context-menu li:first-child > div:first-child {
+    position: relative;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+}
+
+/* hide dropdown button unless multiple items */
+#stoploc-context-menu-bar:not(.multiple) .btn {
+    display: none;
+}
+
+#stoploc-context-menu:not(.stop) .stop {
+    display: none;
+}
+
+#stoploc-context-menu:not(.location) .location {
+    display: none;
+}
+
+#stoploc-context-menu-bar .fa {
+    width: 2.5em;
+    text-align: center;
+}
+
+#stoploc-context-menu .number {
+    border: 1px solid #000;
+    display: inline-block;
+    width: 2.5em;
+    margin-right: 3px;
+    text-align: right;
+    padding: 0px 5px;
+}
+
+#stoploc-context-menu .start {
+    background-color: #00FF00;
+}
+
+#stoploc-context-menu .middle {
+    background-color: #FFFF00;
+}
+
+#stoploc-context-menu .end {
+    background-color: #FF0000;
+}
+
+/* IconPicker */
+.icon-picker .display {
+    margin-bottom: 5px;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-picker .glyph-panel {
+    display: none;
+}
+
+.icon-picker.opened .glyph-panel {
+    display: block;
+}
+
+.icon-picker .glyph-subpanel {
+    display: inline-block;
+    margin-right: 25px;
+    width: 150px;
+}
+    /*
+    .icon-picker .glyph-subpanel .title {
+        text-align: center;
+    }
+*/
+    .icon-picker .glyph-subpanel span {
+        margin: 3px;
+        cursor: pointer;
+        width: 15px;
+        text-align: center;
+    }
+
+    .routecolor0{
+        color: rgb(100,100,200);
+    }
+    .routecolor1{
+            color: rgb(136,0,0);
+    }
+
+    .routecolor2{
+            color: rgb(0,136,0);
+    }
+
+    .routecolor3{
+            color: rgb(0,0,136);
+    }
+
+    .routecolor4{
+            color: rgb(136,136,0);
+    }
+
+    .routecolor5{
+            color: rgb(136,0,136);
+    }
+
+    .routecolor6{
+            color: rgb(0,136,136);
+    }
+
+    .routecolor7{
+            color: rgb(34,68,102);
+    }
+
+    .routecolor8{
+            color: rgb(68,34,102);
+    }
+    .routecolor9{
+            color: rgb(102,68,34);
+    }
+
+    .routecolor10{
+            color: rgb(102,34,68);
+    }
+
+    .routecolor11 {
+        color: rgb(100, 34, 126);
+    }
+
+    .routecolor12 {
+        color: rgb(139,69,119);
+    }
+
+    .routecolor13 {
+        color: rgb(142,207,135);
+    }
+
+.color0 {
+    color: rgb(95,159,159);
+}
+
+.color1 {
+    color: rgb(205,102,0);
+}
+
+.color2 {
+    color: rgb(72,61,139);
+}
+
+.color3 {
+    color: rgb(0, 34, 126);
+}
+
+.color4 {
+    color: rgb(139,69,19);
+}
+
+.color5 {
+    color: rgb(142,107,35);
+}
+
+.color6 {
+    color: rgb(0,100,0);
+}
+
+.color7 {
+    color: rgb(128,128,0);
+}
+
+.color8 {
+    color: rgb(200,159,159);
+}
+
+.color9 {
+    color: rgb(205,102,102);
+}
+
+.color10 {
+    color: rgb(172,61,139);
+}
+
+.color11 {
+    color: rgb(100, 34, 126);
+}
+
+.color12 {
+    color: rgb(139,69,119);
+}
+
+.color13 {
+    color: rgb(142,207,135);
+}
+
+.warncolor {
+color: rgb(255,0,0);
+}
+
+/* Color Picker */
+.color-picker .display {
+    margin-bottom: 5px;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    opacity: .3;
+}
+
+.color-picker .color-panel {
+    display: none;
+}
+
+.color-picker.opened .color-panel {
+    display: block;
+}
+
+.color-picker button {
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    opacity: .3;
+}
+
+/* results */
+#results-directions {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.departure {
+    font-size: larger;
+    margin: 20px 0px;
+}
+
+.infobox {
+    background-color: transparent;
+    color: #000;
+    font-size: 12px;
+    display: none;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.infobox-note-container {
+    margin: 0 10px;
+}
+
+.infobox-note2 {
+    margin: 0 10px;
+    height: 1.2em;
+    overflow: hidden;
+}
+
+.infobox-note3 {
+    margin: 0 10px;
+    height: 1.2em;
+    overflow: hidden;
+}
+
+.infobox-note {
+    width: 100%;
+    height: 40px;
+    pointer-events: all;
+}
+
+.infobox-top {
+    background-color: #FFF;
+    display: block;
+    width: 300px;
+    height: 250px;
+    position: relative;
+}
+
+.infobox-body {
+    padding: 10px;
+}
+
+.infobox-title {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    position: relative;
+    pointer-events: all;
+}
+
+    .infobox-title:not(.multiple) .dropdown-toggle {
+        display: none;
+    }
+
+.infobox-buttonbar {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    pointer-events: all;
+}
+
+.infobox-bottom {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.infobox-bottom-left {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 50px;
+    width: 50px;
+}
+
+
+.infobox-top .fa {
+    width: 2.5em;
+    text-align: center;
+}
+
+.infobox .number {
+    border: 1px solid #000;
+    display: inline-block;
+    width: 2.5em;
+    margin-right: 3px;
+    text-align: right;
+    padding: 0px 5px;
+}
+
+.infobox .start {
+    background-color: #00FF00;
+}
+
+.infobox .middle {
+    background-color: #FFFF00;
+}
+
+.infobox .end {
+    background-color: #FF0000;
+}
+
+/* some buttons only appear in location mode */
+.infobox.stop button.location {
+    display: none;
+}
+
+/* global loading indicator */
+#loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    background-color: #ddd;
+    opacity: 0.3;
+}
+
+#loading-indicator {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 48px;
+}
+
+/* global communications indicator */
+#heartbeat {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    background-color: #FFD;
+    opacity: 0.8;
+    color: #08f;
+}
+
+#heartbeat-indicator {
+    position: absolute;
+    top: 40%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 14px;
+}
+
+    #heartbeat-indicator .symbol {
+        font-size: 48px;
+    }
+
+/* tables in dialogs */
+.modal-body-table-container {
+    overflow: auto;
+    width: 650px;
+    height: 400px;
+}
+
+/* overrides of Bootstrap */
+.modal-dialog {
+    width: 700px;
+}
+
+.modal-body {
+    /* changed by application when window resizes */
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+/* hide dropdowns when clicks elsewhere */
+#menu-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.dropdown-menu {
+    z-index: 101;
+}
+
+/* taken from Brundritt's drawing tools */
+.drawingToolsPrimaryDragHandle div {
+    width: 12px;
+    height: 12px;
+    border: solid 2px #0086ff;
+    background-color: #fff;
+    border-radius: 7px;
+    margin: -7px 0 0 -7px;
+    cursor: move;
+}
+
+    .drawingToolsPrimaryDragHandle div:hover {
+        background-color: #999;
+    }
+
+.drawingToolsSecondaryDragHandle div {
+    width: 12px;
+    height: 12px;
+    border: solid 2px #0086ff;
+    background-color: #fff;
+    border-radius: 7px;
+    margin: -7px 0 0 -7px;
+    opacity: 0.5;
+    cursor: move;
+}
+
+    .drawingToolsSecondaryDragHandle div:hover {
+        background-color: #999;
+        opacity: 1;
+    }
+
+/* overrides of Bing styles */
+
+#content .NavBar_modeSelectorControlContainer {
+    left: 50px;
+}
+/* randy test
+#content .MicrosoftMapDrawing {
+    pointer-events: all !important;
+}
+    */
+
+#content .MapPushpinBase {
+    pointer-events: all !important;
+}
+
+#content .MicrosoftNav .OverlaysTL {
+    background-color: transparent;
+    border-bottom: 0;
+}
+
+.boundtype {
+    color: black;
+    font-weight: bold;
+}
+
+
+/* override bug in bootstrap 3.3.4 that affects Chrome (backdrop covers everything) */
+/* I dunno why this is needed since it is in bootstrap.css*/
+.modal-backdrop {
+    z-index: 1040;
+}
+
+/* remove white background around checkboxes in wells */
+.alert .form-control {
+    background-color: inherit;
+}
+
+/* used for items that are hidden at load time */
+.optional {
+    display: none;
+}
+
+/* the printed version doesn't show the Print button */
+#print-me {
+    margin: 50px;
+}
+
+@media print {
+    #print-me {
+        display: none;
+    }
+}
+
+.row {
+	width: 100%;
+    margin: 10px;
+}
+
+.rteOn{
+    background: #dddddd;
+}
+
+div#dcocto_content {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    min-width: 200px;
+    width: 500px;
+}
+
+div#dcocto_content iframe {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#layerlistButton {
+    position: absolute;
+    top: 5px;
+    left: 50px;
+}
+
+#layerList{
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 50px;
+    right: 0;
+    width: 150px;
+    height: 135px;
+    background-color:white;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: black;
+    padding-left:10px;
+}
+#layerList div{
+    margin: 5px;
+}
+
+
